@@ -1,6 +1,11 @@
-const {  dbCreate  } = require(`./index`)
+const db = require(`./index`).db;
+const inquirer = require(`inquirer`);
+const questions = require(`../questions`);
 
-const db = dbCreate();
+const init = () =>{
+    inquirer.prompt(questions);
+};
+
 const viewAllDepartments = () => {
     console.log(`ran`);
     db.query('SELECT * FROM department;', (err, result) => {
@@ -64,6 +69,4 @@ const whatQuestion = ({ status }) => {
     };
 };
 
-module.exports = {
-    whatQuestion
-};
+module.exports = whatQuestion;

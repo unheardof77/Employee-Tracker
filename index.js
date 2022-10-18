@@ -1,16 +1,6 @@
 const inquirer = require(`inquirer`);
+const questions = require(`./questions`);
+const whatQuestion = require(`./db/connections`)
 
-
-
-
-
-
-const init = () => {
-    inquirer.prompt(questions)
-        .then((data) => whatQuestion(data))
-};
-
-
-
-
-
+inquirer.prompt(questions)
+.then(whatQuestion);
