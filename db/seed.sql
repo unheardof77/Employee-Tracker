@@ -1,6 +1,4 @@
-INSERT INTO department ()
+INSERT INTO department(name) 
 VALUES
-INSERT INTO role ()
-VALUES
-INSERT INTO employee ()
-VALUES
+    ("Morgan"),
+    ("Tolman");

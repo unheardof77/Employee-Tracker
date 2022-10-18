@@ -1,3 +1,16 @@
-const init = require(`./db/index`);
+const inquirer = require(`inquirer`);
 
-init();
+
+
+
+
+
+const init = () => {
+    inquirer.prompt(questions)
+        .then((data) => whatQuestion(data))
+};
+
+
+
+
+
