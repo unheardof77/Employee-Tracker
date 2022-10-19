@@ -35,7 +35,7 @@ const viewEmployeesByManager = () =>{
 };
 
 const viewEmployeesByDepartment = async () =>{
-    db.query(`SELECT * FROM employee WHERE ;`, (err, result) => {
+    db.query(`SELECT * FROM employee JOIN department ON employee.role_id = role.id AND role.department_id = department.id ;`, (err, result) => {
         if (err) console.error(err);
         console.table(result);
         init();
